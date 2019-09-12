@@ -4,18 +4,24 @@ import "./plugins/element.js";
 import ElementUi from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 
+Vue.use(VueRouter);
 // import views
+import Home from "./pages/Home.vue";
 import App from "./App.vue";
 import App2 from "./pages/App2.vue";
 
 Vue.config.productionTip = false;
 Vue.use(ElementUi);
 
-const routes = [{ path: "/app2", component: App2 }];
+const routes = [
+  { path: "/app2", name:'app2', component: App2 },
+  { path: "/", component: Home }
+];
 
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
 const router = new VueRouter({
+  mode: 'history',
   routes // （缩写）相当于 routes: routes
 });
 
@@ -23,6 +29,6 @@ const router = new VueRouter({
 // 记得要通过 router 配置参数注
 
 new Vue({
-  router,
+  router: router,
   render: h => h(App)
-}).$mount("#app");
+}).$mount('#app')

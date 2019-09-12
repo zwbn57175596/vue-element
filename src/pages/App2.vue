@@ -3,23 +3,18 @@
     <img src="../assets/logo.png" />
     <div>
       <p>
-        If Element is successfully added to this project, you'll see an
-        <code v-text="'<el-button>'"></code>
-        below
+        这是app2
       </p>
       <el-button>el-button</el-button>
     </div>
-    <HelloWorld msg="Welcome to Your Vue.js App2 Page" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "../components/HelloWorld.vue";
 
 export default {
   name: "app2",
   components: {
-    HelloWorld
   }
 };
 </script>

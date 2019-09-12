@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div id="app1">
+    <router-link :to="{name: 'app2'}">跳转app2</router-link>
   </div>
 </template>
 
@@ -8,6 +8,8 @@
 
 export default {
   name: 'app',
+  components: {
+  }
 }
 </script>
 
